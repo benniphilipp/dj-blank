@@ -1,0 +1,21 @@
+{% load static %}
+
+<html lang="de" data-lt-installed="true">
+    <!--Footer-->
+    {% include "includes/header.html" %}
+
+    <!--CSS Styles-->
+    {% block css %}{% endblock %}
+
+    <!--Block Content-->
+    <body>
+    {% block body%}{% endblock %}
+
+    <!--Footer-->
+    {% include "includes/footer.html" %}
+
+    <!--Javascript-->
+    {% block javasript %}{% endblock %}
+
+    </body>
+</html>
