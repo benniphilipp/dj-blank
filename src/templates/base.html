@@ -1,4 +1,6 @@
+{% load compress %}
 {% load static %}
+
 
 <html lang="de" data-lt-installed="true">
     <!--Footer-->
@@ -12,10 +14,17 @@
     {% block body%}{% endblock %}
 
     <!--Footer-->
-    {% include "includes/footer.html" %}
+
 
     <!--Javascript-->
     {% block javasript %}{% endblock %}
+
+    
+
+    {% compress js %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endcompress %}
+    
 
     </body>
 </html>
