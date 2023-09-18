@@ -1,0 +1,30 @@
+{% load compress %}
+{% load static %}
+
+
+<html lang="de" data-lt-installed="true">
+    <!--Footer-->
+    {% include "includes/header.html" %}
+
+    <!--CSS Styles-->
+    {% block css %}{% endblock %}
+
+    <!--Block Content-->
+    <body>
+    {% block body%}{% endblock %}
+
+    <!--Footer-->
+
+
+    <!--Javascript-->
+    {% block javasript %}{% endblock %}
+
+    
+
+    {% compress js %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endcompress %}
+    
+
+    </body>
+</html>

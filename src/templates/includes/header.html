@@ -1,0 +1,6 @@
+{% load compress %}
+{% load static %}
+
+{% compress css %}
+  <link rel="stylesheet" type="text/x-scss" href="{% static 'css/main.scss' %}">
+{% endcompress %}
